@@ -1,418 +1,471 @@
 <!DOCTYPE html>
+<!--
+==============================================================
+ SIBERMU — LANDING PAGE KEMAHASISWAAN & AIK
+ FILE     : index.html
+ FUNGSI   : Struktur / isi halaman
+==============================================================
+
+ PANDUAN EDIT CEPAT
+ -------------------------------------------------------------
+ [1] Nama / judul website  : cari "SIBERMU"
+ [2] Menu navbar           : cari "NAVBAR"
+ [3] Hero                  : cari "HERO"
+ [4] Kemahasiswaan         : cari "KEMAHASISWAAN"
+ [5] Aktivitas             : cari "AKTIVITAS"
+ [6] AIK                   : cari "AIK"
+ [7] Informasi             : cari "INFORMASI UTAMA"
+ [8] Footer                : cari "FOOTER"
+
+ CATATAN:
+ - HTML = teks, struktur, tombol, card, section.
+ - CSS  = warna, ukuran, jarak, layout, responsive.
+ - JS   = interaksi dan animasi.
+ - Untuk menambah card, paling aman copy satu card
+   yang sudah ada lalu ubah isi teksnya.
+==============================================================
+-->
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SiberMu Connect - ruang informasi kemahasiswaan dan Al-Islam Kemuhammadiyahan.">
-  <title>SiberMu Connect | Kemahasiswaan & AIK</title>
-
-  <!-- Google Font -->
+  <meta name="description" content="SiberMu — Informasi Kemahasiswaan dan Al-Islam Kemuhammadiyahan">
+  <title>SiberMu | Kemahasiswaan & AIK</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- =========================
-       HEADER / NAVIGATION
-  ========================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-wrapper">
-      <a href="#beranda" class="brand" aria-label="SiberMu Connect">
-        <span class="brand-mark"><i class="fa-solid fa-graduation-cap"></i></span>
-        <span class="brand-text">
-          <strong>SiberMu</strong>
-          <small>CONNECT</small>
-        </span>
-      </a>
+<div class="page">
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+  <!-- =====================================================
+       01. NAVBAR / MENU UTAMA
+       EDIT DI SINI:
+       - Nama brand
+       - Menu
+       - Tombol "Jelajahi"
+       ===================================================== -->
+  <header class="navbar">
+    <a href="#beranda" class="brand">
+      <div class="brand-symbol">S</div>
+      <div>
+        <div class="brand-name">SIBERMU</div>
+        <div class="brand-sub">UNIVERSITAS SIBER MUHAMMADIYAH</div>
+      </div>
+    </a>
 
-      <nav class="main-nav" id="mainNav">
-        <a href="#beranda" class="nav-link active">Beranda</a>
-        <a href="#kemahasiswaan" class="nav-link">Kemahasiswaan</a>
-        <a href="#aik" class="nav-link">AIK</a>
-        <a href="#kegiatan" class="nav-link">Kegiatan</a>
-        <a href="#tentang" class="nav-link">Tentang</a>
-        <a href="#kontak" class="nav-cta">Jelajahi <i class="fa-solid fa-arrow-right"></i></a>
-      </nav>
-    </div>
+    <nav class="nav">
+      <a class="active" href="#beranda">Beranda</a>
+      <a href="#kemahasiswaan">Kemahasiswaan</a>
+      <a href="#aik">AIK</a>
+      <a href="#aktivitas">Aktivitas</a>
+      <a href="#informasi">Informasi</a>
+      <a href="#tentang">Tentang</a>
+    </nav>
+
+    <a href="#informasi" class="nav-button">Jelajahi</a>
   </header>
 
   <main>
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-    <section class="hero-section" id="beranda">
-      <div class="hero-decoration hero-decoration-one"></div>
-      <div class="hero-decoration hero-decoration-two"></div>
 
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Ruang digital mahasiswa SiberMu
-          </div>
+    <!-- =====================================================
+         02. HERO / TAMPILAN PEMBUKA
+         EDIT DI SINI:
+         - Eyebrow
+         - Judul utama
+         - Deskripsi
+         - Tombol CTA
+         - Statistik singkat
+         ===================================================== -->
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> KEMAHASISWAAN & AL-ISLAM KEMUHAMMADIYAHAN</div>
+        <h1>Ruang Digital<br><em>Mahasiswa SiberMu</em></h1>
+        <p>
+          Satu halaman untuk mengenal kehidupan kemahasiswaan,
+          aktivitas mahasiswa, serta nilai dan kegiatan
+          Al-Islam dan Kemuhammadiyahan.
+        </p>
 
-          <h1>Ruang Tumbuh,<br><span>Berkarya,</span> dan Menginspirasi.</h1>
-
-          <p class="hero-description">
-            Temukan informasi kemahasiswaan, kegiatan organisasi, prestasi,
-            serta nilai Al-Islam dan Kemuhammadiyahan dalam satu ruang digital.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#kemahasiswaan" class="btn btn-primary">
-              Jelajahi Informasi <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#aik" class="btn btn-secondary">
-              <i class="fa-solid fa-play"></i> Kenali AIK
-            </a>
-          </div>
-
-          <div class="hero-trust">
-            <div class="avatar-stack" aria-hidden="true">
-              <span>IV</span><span>SM</span><span>AI</span><span>+</span>
-            </div>
-            <p><strong>Belajar bersama.</strong><br>Berproses dengan nilai dan kontribusi.</p>
-          </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#kemahasiswaan">Lihat Kemahasiswaan <b>→</b></a>
+          <a class="button secondary" href="#aik">Jelajahi AIK</a>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="visual-orbit orbit-one"></div>
-          <div class="visual-orbit orbit-two"></div>
-
-          <div class="hero-card-main">
-            <div class="card-topline">
-              <span class="status-pill"><i class="fa-solid fa-circle"></i> Ruang Inspirasi</span>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-
-            <div class="student-illustration">
-              <div class="illustration-sun"></div>
-              <div class="illustration-circle circle-back"></div>
-              <div class="illustration-circle circle-front"></div>
-              <div class="person">
-                <div class="person-head"></div>
-                <div class="person-body"></div>
-                <div class="person-arm"></div>
-              </div>
-              <div class="floating-book"><i class="fa-solid fa-book-open"></i></div>
-              <div class="floating-star"><i class="fa-solid fa-star"></i></div>
-            </div>
-
-            <div class="hero-card-caption">
-              <div>
-                <small>Hari ini adalah kesempatan</small>
-                <strong>untuk berkembang.</strong>
-              </div>
-              <span class="caption-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </div>
-
-          <div class="floating-info info-top">
-            <span class="floating-icon blue"><i class="fa-solid fa-users"></i></span>
-            <div><strong>Komunitas</strong><small>Temukan ruang kolaborasi</small></div>
-          </div>
-
-          <div class="floating-info info-bottom">
-            <span class="floating-icon green"><i class="fa-solid fa-mosque"></i></span>
-            <div><strong>Nilai AIK</strong><small>Ilmu, iman, dan amal</small></div>
-          </div>
+        <div class="hero-stats">
+          <div><strong>01</strong><span>Organisasi<br>Mahasiswa</span></div>
+          <div><strong>02</strong><span>Unit Kegiatan<br>Mahasiswa</span></div>
+          <div><strong>03</strong><span>Prestasi<br>Mahasiswa</span></div>
+          <div><strong>04</strong><span>Layanan<br>Mahasiswa</span></div>
         </div>
       </div>
 
-      <div class="container hero-bottom">
-        <div class="scroll-note"><i class="fa-solid fa-arrow-down"></i> Gulir untuk menjelajah</div>
-        <div class="hero-line"></div>
-        <div class="hero-number">01 <span>/ 05</span></div>
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+
+        <div class="floating-card card-top">
+          <span class="mini-icon">✦</span>
+          <div><b>Kemahasiswaan</b><small>Ruang tumbuh & berkarya</small></div>
+        </div>
+
+        <div class="device">
+          <div class="device-top"><i></i><i></i><i></i><span>SIBERMU</span></div>
+          <div class="device-banner">
+            <small>KEMAHASISWAAN</small>
+            <strong>Bergerak.<br>Berkarya.</strong>
+            <div class="mini-line"></div>
+          </div>
+          <div class="device-content">
+            <div class="device-title">Informasi Mahasiswa</div>
+            <div class="device-row"><span>Organisasi</span><b>→</b></div>
+            <div class="device-row"><span>UKM</span><b>→</b></div>
+            <div class="device-row"><span>Prestasi</span><b>→</b></div>
+          </div>
+        </div>
+
+        <div class="floating-card card-bottom">
+          <span class="mini-icon green">✓</span>
+          <div><b>AIK</b><small>Nilai • Kajian • Syiar</small></div>
+        </div>
       </div>
     </section>
 
-    <!-- =========================
-         INTRO / STATS
-    ========================== -->
-    <section class="intro-section section-padding" id="tentang">
-      <div class="container intro-grid">
-        <div class="section-heading reveal">
-          <span class="section-label">Tentang SiberMu Connect</span>
-          <h2>Satu ruang untuk<br><span>bertumbuh bersama.</span></h2>
-        </div>
+    <!-- =====================================================
+         03. INTRO / RINGKASAN KEMAHASISWAAN & AIK
+         EDIT DI SINI:
+         - Judul
+         - Deskripsi
+         - 3 kartu pengantar
+         ===================================================== -->
+    <section class="intro section">
+      <div class="section-heading center">
+        <span class="label">SATU RUANG INFORMASI</span>
+        <h2>Mahasiswa Berkemajuan,<br>Berkarakter dan Berdaya</h2>
+        <p>
+          Landing page ini menyatukan dua bidang yang menjadi cakupan utama:
+          <b>Kemahasiswaan</b> serta <b>Al-Islam dan Kemuhammadiyahan (AIK)</b>.
+        </p>
+      </div>
 
-        <div class="intro-copy reveal">
+      <div class="intro-grid">
+        <article class="intro-card large">
+          <span class="number">01</span>
+          <div class="intro-icon blue">◈</div>
+          <h3>Kemahasiswaan</h3>
           <p>
-            SiberMu Connect dirancang sebagai landing page informasi yang
-            mempertemukan aktivitas kemahasiswaan dengan semangat
-            Al-Islam dan Kemuhammadiyahan.
+            Ruang informasi mengenai organisasi mahasiswa, unit kegiatan mahasiswa,
+            prestasi mahasiswa, dan layanan bagi mahasiswa.
           </p>
-          <p>
-            Gunakan halaman ini sebagai pusat informasi, inspirasi kegiatan,
-            dan pengenalan nilai yang mendukung perjalanan mahasiswa.
-          </p>
-          <a href="#kegiatan" class="text-link">Lihat kegiatan terbaru <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
+          <a href="#kemahasiswaan">Pelajari lebih lanjut →</a>
+        </article>
 
-      <div class="container stats-grid">
-        <div class="stat-item reveal">
-          <strong data-counter="4">0</strong><span>+</span>
-          <p>Ruang informasi utama</p>
-        </div>
-        <div class="stat-item reveal">
-          <strong data-counter="8">0</strong><span>+</span>
-          <p>Topik yang dapat dikembangkan</p>
-        </div>
-        <div class="stat-item reveal">
-          <strong data-counter="2">0</strong><span></span>
-          <p>Bidang dalam satu halaman</p>
-        </div>
-        <div class="stat-item reveal">
-          <strong>100</strong><span>%</span>
-          <p>Responsif untuk perangkat</p>
-        </div>
+        <article class="intro-card">
+          <span class="number">02</span>
+          <div class="intro-icon purple">✦</div>
+          <h3>Al-Islam</h3>
+          <p>
+            Informasi kegiatan keagamaan dan kajian sebagai bagian dari pembinaan
+            kehidupan mahasiswa.
+          </p>
+          <a href="#aik">Lihat AIK →</a>
+        </article>
+
+        <article class="intro-card">
+          <span class="number">03</span>
+          <div class="intro-icon gold">☼</div>
+          <h3>Kemuhammadiyahan</h3>
+          <p>
+            Nilai dan semangat Kemuhammadiyahan hadir sebagai bagian dari
+            informasi dan aktivitas mahasiswa.
+          </p>
+          <a href="#aik">Lihat AIK →</a>
+        </article>
       </div>
     </section>
 
-    <!-- =========================
-         KEMAHASISWAAN SECTION
-    ========================== -->
-    <section class="feature-section section-padding" id="kemahasiswaan">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="section-label">01 — Kemahasiswaan</span>
-          <h2>Ruang untuk <span>berkarya</span><br>dan berkembang.</h2>
+    <!-- =====================================================
+         04. KEMAHASISWAAN
+         SESUAIKAN DENGAN DATA RESMI:
+         - Organisasi Mahasiswa
+         - UKM
+         - Prestasi Mahasiswa
+         - Layanan Mahasiswa
+
+         UNTUK MENAMBAH CARD:
+         copy salah satu <article class="info-card">...</article>
+         lalu ubah nomor, ikon, judul, deskripsi.
+         ===================================================== -->
+    <section class="section blue-section" id="kemahasiswaan">
+      <div class="section-heading">
+        <div>
+          <span class="label">BIDANG KEMAHASISWAAN</span>
+          <h2>Temukan Ruang<br>untuk Bertumbuh</h2>
+        </div>
+        <p>
+          Informasi kemahasiswaan menjadi salah satu bagian utama landing page,
+          mencakup organisasi, kegiatan, prestasi, dan layanan mahasiswa.
+        </p>
+      </div>
+
+      <div class="info-grid four">
+        <article class="info-card">
+          <div class="info-number">01</div>
+          <div class="info-icon">♟</div>
+          <h3>Organisasi Mahasiswa</h3>
           <p>
-            Informasi yang membantu mahasiswa menemukan komunitas,
-            mengembangkan potensi, dan berkontribusi.
+            Informasi mengenai organisasi mahasiswa dan ruang partisipasi
+            mahasiswa dalam lingkungan kampus.
           </p>
-        </div>
+          <span class="card-link">Eksplorasi →</span>
+        </article>
 
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <div class="feature-icon blue-icon"><i class="fa-solid fa-people-group"></i></div>
-            <span class="feature-number">01</span>
-            <h3>Organisasi Mahasiswa</h3>
-            <p>Kenali organisasi dan wadah kepemimpinan untuk membangun pengalaman berkolaborasi.</p>
-            <button class="card-link detail-button" data-title="Organisasi Mahasiswa" data-content="Organisasi mahasiswa menjadi ruang untuk belajar kepemimpinan, komunikasi, kerja sama, dan pengabdian. Bagian ini dapat dikembangkan menjadi daftar organisasi, struktur kepengurusan, agenda, serta tautan informasi resmi.">Pelajari <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-          </article>
+        <article class="info-card">
+          <div class="info-number">02</div>
+          <div class="info-icon purple-bg">★</div>
+          <h3>Unit Kegiatan Mahasiswa</h3>
+          <p>
+            Wadah kegiatan, minat, bakat, kreativitas, dan pengembangan
+            diri mahasiswa.
+          </p>
+          <span class="card-link">Eksplorasi →</span>
+        </article>
 
-          <article class="feature-card reveal">
-            <div class="feature-icon orange-icon"><i class="fa-solid fa-palette"></i></div>
-            <span class="feature-number">02</span>
-            <h3>Unit Kegiatan Mahasiswa</h3>
-            <p>Temukan ruang untuk mengembangkan minat, bakat, kreativitas, dan keterampilan.</p>
-            <button class="card-link detail-button" data-title="Unit Kegiatan Mahasiswa" data-content="UKM dapat menampilkan bidang olahraga, seni, teknologi, bahasa, sosial, dan kegiatan lainnya. Tambahkan daftar UKM, jadwal latihan, kontak pengurus, serta dokumentasi kegiatan.">Pelajari <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-          </article>
+        <article class="info-card">
+          <div class="info-number">03</div>
+          <div class="info-icon gold-bg">🏅</div>
+          <h3>Prestasi Mahasiswa</h3>
+          <p>
+            Ruang untuk menampilkan capaian mahasiswa sebagai inspirasi
+            dan representasi potensi SiberMu.
+          </p>
+          <span class="card-link">Lihat prestasi →</span>
+        </article>
 
-          <article class="feature-card reveal">
-            <div class="feature-icon purple-icon"><i class="fa-solid fa-trophy"></i></div>
-            <span class="feature-number">03</span>
-            <h3>Prestasi Mahasiswa</h3>
-            <p>Apresiasi pencapaian mahasiswa sebagai inspirasi untuk terus melangkah.</p>
-            <button class="card-link detail-button" data-title="Prestasi Mahasiswa" data-content="Bagian prestasi dapat berisi nama penerima penghargaan, bidang prestasi, tingkat kompetisi, tahun, dan cerita singkat. Pastikan data yang ditampilkan berasal dari sumber yang dapat dipertanggungjawabkan.">Pelajari <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-          </article>
-
-          <article class="feature-card reveal">
-            <div class="feature-icon green-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <span class="feature-number">04</span>
-            <h3>Layanan Mahasiswa</h3>
-            <p>Akses informasi layanan yang mendukung kebutuhan akademik dan nonakademik.</p>
-            <button class="card-link detail-button" data-title="Layanan Mahasiswa" data-content="Layanan mahasiswa dapat dikembangkan menjadi direktori informasi seperti layanan akademik, konseling, beasiswa, administrasi, pusat karier, dan kontak resmi kampus.">Pelajari <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-          </article>
-        </div>
+        <article class="info-card">
+          <div class="info-number">04</div>
+          <div class="info-icon green-bg">◎</div>
+          <h3>Layanan Mahasiswa</h3>
+          <p>
+            Informasi layanan dan dukungan yang membantu mahasiswa
+            memperoleh informasi yang dibutuhkan.
+          </p>
+          <span class="card-link">Lihat layanan →</span>
+        </article>
       </div>
     </section>
 
-    <!-- =========================
-         AIK SECTION
-    ========================== -->
-    <section class="aik-section section-padding" id="aik">
-      <div class="aik-pattern"></div>
-      <div class="container aik-grid">
-        <div class="aik-visual reveal">
-          <div class="aik-visual-card">
-            <div class="aik-top-label"><i class="fa-solid fa-star-and-crescent"></i> Al-Islam & Kemuhammadiyahan</div>
-            <div class="aik-quote-mark">“</div>
-            <h3>Ilmu yang<br>mencerahkan,<br>amal yang<br>menggerakkan.</h3>
-            <div class="aik-bottom-line">
-              <span></span>
-              <small>Belajar • Beriman • Beramal</small>
+    <!-- =====================================================
+         05. AKTIVITAS MAHASISWA
+         EDIT DI SINI:
+         - Foto/visual kegiatan
+         - Judul aktivitas
+         - Deskripsi
+         ===================================================== -->
+    <section class="section activity-section" id="aktivitas">
+      <div class="section-heading center">
+        <span class="label">KEHIDUPAN MAHASISWA</span>
+        <h2>Aktif, Kreatif, Kolaboratif</h2>
+        <p>
+          Kehidupan mahasiswa dapat ditampilkan melalui aktivitas organisasi,
+          komunitas, pengembangan minat dan bakat, serta pencapaian mahasiswa.
+        </p>
+      </div>
+
+      <div class="activity-layout">
+        <div class="activity-main">
+          <div class="activity-image">
+            <div class="image-overlay">
+              <span>AKTIVITAS MAHASISWA</span>
+              <strong>Berani mengambil peran,<br>berani menciptakan perubahan.</strong>
             </div>
           </div>
-          <div class="aik-mini-card"><i class="fa-solid fa-book-quran"></i><span>Ruang Refleksi</span></div>
         </div>
 
-        <div class="aik-content reveal">
-          <span class="section-label light-label">02 — Al-Islam & Kemuhammadiyahan</span>
-          <h2>Menjadikan nilai<br><span>sebagai arah.</span></h2>
+        <div class="activity-list">
+          <article>
+            <span>01</span>
+            <div><h3>Organisasi & Kepemimpinan</h3><p>Ruang untuk berpartisipasi, berkolaborasi, dan mengembangkan kepemimpinan.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><h3>Minat & Bakat</h3><p>Wadah pengembangan kreativitas, kompetensi, dan potensi mahasiswa.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><h3>Prestasi</h3><p>Menampilkan pencapaian mahasiswa sebagai inspirasi bagi sivitas akademika.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         06. AL-ISLAM & KEMUHAMMADIYAHAN (AIK)
+         BAGIAN UTAMA:
+         - Kegiatan Keagamaan
+         - Kajian
+         - Syiar
+         - Nilai Kemuhammadiyahan
+
+         CATATAN:
+         Jangan memasukkan data faktual yang belum memiliki
+         sumber resmi. Data dapat diganti nanti.
+         ===================================================== -->
+    <section class="section aik-section" id="aik">
+      <div class="aik-layout">
+        <div class="aik-visual">
+          <div class="aik-orbit orbit-a"></div>
+          <div class="aik-orbit orbit-b"></div>
+          <div class="aik-core">
+            <span>AIK</span>
+            <small>AL-ISLAM<br>& KEMUHAMMADIYAHAN</small>
+          </div>
+          <div class="aik-tag tag-one">AL-ISLAM</div>
+          <div class="aik-tag tag-two">KAJIAN</div>
+          <div class="aik-tag tag-three">SYIAR</div>
+          <div class="aik-tag tag-four">NILAI</div>
+        </div>
+
+        <div class="aik-copy">
+          <span class="label">AL-ISLAM & KEMUHAMMADIYAHAN</span>
+          <h2>Nilai yang Menguatkan<br>Perjalanan Mahasiswa</h2>
           <p>
-            AIK hadir sebagai ruang untuk mengenal, memahami, dan mengamalkan
-            nilai-nilai Islam serta semangat Kemuhammadiyahan dalam kehidupan mahasiswa.
+            Bagian AIK memuat informasi kegiatan keagamaan, kajian, syiar,
+            serta nilai Kemuhammadiyahan sebagai cakupan yang diharapkan
+            dalam landing page.
           </p>
 
-          <div class="aik-list">
-            <div class="aik-list-item">
-              <span><i class="fa-solid fa-book-open"></i></span>
-              <div><strong>Kajian Islam</strong><small>Ruang belajar dan memperdalam pemahaman.</small></div>
-            </div>
-            <div class="aik-list-item">
-              <span><i class="fa-solid fa-bullhorn"></i></span>
-              <div><strong>Syiar dan Kegiatan Keagamaan</strong><small>Berbagi kebaikan melalui kegiatan yang bermakna.</small></div>
-            </div>
-            <div class="aik-list-item">
-              <span><i class="fa-solid fa-handshake-angle"></i></span>
-              <div><strong>Nilai Kemuhammadiyahan</strong><small>Menguatkan semangat ilmu, amal, dan kemajuan.</small></div>
-            </div>
+          <div class="aik-items">
+            <div><b>01</b><span><strong>Kegiatan Keagamaan</strong><small>Informasi aktivitas keagamaan mahasiswa.</small></span></div>
+            <div><b>02</b><span><strong>Kajian</strong><small>Ruang informasi untuk kajian dan pembelajaran.</small></span></div>
+            <div><b>03</b><span><strong>Syiar</strong><small>Penyampaian pesan positif melalui media digital.</small></span></div>
+            <div><b>04</b><span><strong>Nilai Kemuhammadiyahan</strong><small>Nilai dan semangat Kemuhammadiyahan.</small></span></div>
           </div>
-
-          <a href="#kegiatan" class="btn btn-light">Jelajahi Ruang AIK <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         ACTIVITIES SECTION
-    ========================== -->
-    <section class="activities-section section-padding" id="kegiatan">
-      <div class="container">
-        <div class="section-heading-row reveal">
-          <div>
-            <span class="section-label">03 — Kegiatan</span>
-            <h2>Inspirasi yang <span>bergerak.</span></h2>
-          </div>
-          <p>Contoh konten kegiatan yang dapat diganti dengan informasi resmi.</p>
+    <!-- =====================================================
+         07. HIGHLIGHT / PESAN UTAMA
+         EDIT DI SINI:
+         Pesan singkat yang menghubungkan Kemahasiswaan + AIK.
+         ===================================================== -->
+    <section class="section highlight-section">
+      <div class="highlight-card">
+        <div>
+          <span class="label">KEMAHASISWAAN × AIK</span>
+          <h2>Satu halaman,<br>satu pengalaman informasi.</h2>
+          <p>
+            Kemahasiswaan dan AIK tidak berdiri sebagai dua halaman terpisah.
+            Keduanya disajikan dalam satu pengalaman landing page yang saling terhubung.
+          </p>
         </div>
-
-        <div class="filter-tabs reveal" role="tablist" aria-label="Filter kegiatan">
-          <button class="filter-button active" data-filter="all">Semua</button>
-          <button class="filter-button" data-filter="kemahasiswaan">Kemahasiswaan</button>
-          <button class="filter-button" data-filter="aik">AIK</button>
-        </div>
-
-        <div class="activities-grid" id="activitiesGrid">
-          <article class="activity-card reveal" data-category="aik">
-            <div class="activity-image image-a">
-              <span class="activity-tag">AIK</span>
-              <i class="fa-solid fa-book-open-reader"></i>
-            </div>
-            <div class="activity-body">
-              <div class="activity-meta"><span><i class="fa-regular fa-calendar"></i> Contoh agenda</span><span><i class="fa-regular fa-clock"></i> 09.00</span></div>
-              <h3>Kajian dan Refleksi Mahasiswa</h3>
-              <p>Ruang dialog untuk memperkuat pemahaman keislaman dan penerapannya dalam kehidupan.</p>
-              <button class="text-link detail-button" data-title="Kajian dan Refleksi Mahasiswa" data-content="Konten ini merupakan contoh kartu kegiatan. Ganti judul, tanggal, deskripsi, dan detailnya dengan informasi resmi yang akan ditampilkan pada website.">Baca detail <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-          </article>
-
-          <article class="activity-card reveal" data-category="kemahasiswaan">
-            <div class="activity-image image-b">
-              <span class="activity-tag">Kemahasiswaan</span>
-              <i class="fa-solid fa-users-rectangle"></i>
-            </div>
-            <div class="activity-body">
-              <div class="activity-meta"><span><i class="fa-regular fa-calendar"></i> Contoh agenda</span><span><i class="fa-regular fa-clock"></i> 13.00</span></div>
-              <h3>Forum Kolaborasi Organisasi</h3>
-              <p>Wadah bertukar gagasan, menyusun program, dan membangun kerja sama antarmahasiswa.</p>
-              <button class="text-link detail-button" data-title="Forum Kolaborasi Organisasi" data-content="Konten ini merupakan contoh kartu kegiatan. Ganti judul, tanggal, deskripsi, dan detailnya dengan informasi resmi yang akan ditampilkan pada website.">Baca detail <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-          </article>
-
-          <article class="activity-card reveal" data-category="aik">
-            <div class="activity-image image-c">
-              <span class="activity-tag">AIK</span>
-              <i class="fa-solid fa-mosque"></i>
-            </div>
-            <div class="activity-body">
-              <div class="activity-meta"><span><i class="fa-regular fa-calendar"></i> Contoh agenda</span><span><i class="fa-regular fa-clock"></i> 16.00</span></div>
-              <h3>Gerakan Berbagi dan Mengabdi</h3>
-              <p>Menghidupkan semangat kepedulian melalui aksi sosial dan pengabdian yang terarah.</p>
-              <button class="text-link detail-button" data-title="Gerakan Berbagi dan Mengabdi" data-content="Konten ini merupakan contoh kartu kegiatan. Ganti judul, tanggal, deskripsi, dan detailnya dengan informasi resmi yang akan ditampilkan pada website.">Baca detail <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-          </article>
+        <div class="highlight-visual">
+          <div class="hv hv-one">MAHASISWA</div>
+          <div class="hv hv-two">AIK</div>
+          <div class="hv hv-three">BERKARYA</div>
+          <div class="hv hv-four">BERKEMAJUAN</div>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         CTA SECTION
-    ========================== -->
-    <section class="cta-section section-padding" id="kontak">
-      <div class="container cta-box reveal">
-        <div class="cta-content">
-          <span class="section-label">Mari bertumbuh bersama</span>
-          <h2>Setiap langkah kecil<br>membawa <span>perubahan.</span></h2>
-          <p>Jelajahi informasi, temukan komunitas, dan mulai kontribusimu hari ini.</p>
-        </div>
-        <a href="#beranda" class="btn btn-primary">Kembali ke Atas <i class="fa-solid fa-arrow-up"></i></a>
+    <!-- =====================================================
+         08. INFORMASI UTAMA
+         EDIT DI SINI:
+         Ringkasan cepat menuju section penting.
+         ===================================================== -->
+    <section class="section information-section" id="informasi">
+      <div class="section-heading center">
+        <span class="label">INFORMASI UTAMA</span>
+        <h2>Informasi dalam Satu Tampilan</h2>
+        <p>
+          Struktur halaman dirancang agar pengunjung dapat menemukan
+          informasi penting dengan cepat dan nyaman.
+        </p>
+      </div>
+
+      <div class="information-grid">
+        <article><span>01</span><h3>Kemahasiswaan</h3><p>Organisasi • UKM • Prestasi • Layanan</p><a href="#kemahasiswaan">Buka bagian →</a></article>
+        <article><span>02</span><h3>AIK</h3><p>Keagamaan • Kajian • Syiar • Nilai</p><a href="#aik">Buka bagian →</a></article>
+        <article><span>03</span><h3>Aktivitas</h3><p>Kegiatan dan ruang pengembangan mahasiswa</p><a href="#aktivitas">Buka bagian →</a></article>
       </div>
     </section>
+
+    <!-- =====================================================
+         09. TENTANG & KREDIT MEDIA
+         PENTING:
+         Sumber foto, ikon, ilustrasi, atau media eksternal
+         dapat dicantumkan di bagian kredit sesuai kebutuhan.
+         ===================================================== -->
+    <section class="section about-final" id="tentang">
+      <div class="about-final-card">
+        <div>
+          <span class="label">TENTANG SIBERMU</span>
+          <h2>Digitalisasi informasi untuk<br>mahasiswa yang berkemajuan.</h2>
+        </div>
+        <div>
+          <p>
+            Halaman ini merupakan konsep landing page yang menyatukan
+            informasi Kemahasiswaan dan Al-Islam Kemuhammadiyahan dalam satu
+            pengalaman digital.
+          </p>
+          <div class="credit-line">Kredit media akan dicantumkan pada bagian ini sesuai sumber yang digunakan.</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#beranda" class="brand">
-          <span class="brand-mark"><i class="fa-solid fa-graduation-cap"></i></span>
-          <span class="brand-text"><strong>SiberMu</strong><small>CONNECT</small></span>
-        </a>
-        <p>Ruang digital untuk informasi kemahasiswaan dan Al-Islam Kemuhammadiyahan.</p>
-      </div>
+  <!-- =====================================================
+       AKHIR KONTEN UTAMA
+       Jangan menaruh section baru setelah </main>.
+       Tambahkan section baru sebelum </main>.
+       ===================================================== -->
 
-      <div class="footer-column">
-        <h4>Navigasi</h4>
-        <a href="#beranda">Beranda</a>
-        <a href="#kemahasiswaan">Kemahasiswaan</a>
-        <a href="#aik">AIK</a>
-        <a href="#kegiatan">Kegiatan</a>
-      </div>
-
-      <div class="footer-column">
-        <h4>Pengembangan</h4>
-        <a href="#tentang">Tentang halaman</a>
-        <a href="#kontak">Kontak</a>
-        <a href="#beranda">Kembali ke atas</a>
-      </div>
-
-      <div class="footer-column">
-        <h4>Media Sosial</h4>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
+  <!-- =====================================================
+       10. FOOTER
+       EDIT DI SINI:
+       - Nama
+       - Link menu
+       - Keterangan singkat
+       ===================================================== -->
+  <footer>
+    <div class="footer-brand">
+      <div class="footer-logo">SIBERMU</div>
+      <p>Kemahasiswaan & Al-Islam Kemuhammadiyahan</p>
+      <small>Universitas Siber Muhammadiyah</small>
     </div>
-
-    <div class="container footer-bottom">
-      <p>© <span id="currentYear"></span> SiberMu Connect. Karya landing page.</p>
-      <p>Gambar/ikon dan konten dapat disesuaikan dengan sumber resmi.</p>
+    <div>
+      <h4>Kemahasiswaan</h4>
+      <a href="#kemahasiswaan">Organisasi</a>
+      <a href="#kemahasiswaan">UKM</a>
+      <a href="#kemahasiswaan">Prestasi</a>
+      <a href="#kemahasiswaan">Layanan</a>
+    </div>
+    <div>
+      <h4>AIK</h4>
+      <a href="#aik">Keagamaan</a>
+      <a href="#aik">Kajian</a>
+      <a href="#aik">Syiar</a>
+      <a href="#aik">Nilai Kemuhammadiyahan</a>
+    </div>
+    <div>
+      <h4>Halaman</h4>
+      <a href="#beranda">Beranda</a>
+      <a href="#aktivitas">Aktivitas</a>
+      <a href="#informasi">Informasi</a>
+      <a href="#tentang">Tentang</a>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 SiberMu</span>
+      <p>Landing page Kemahasiswaan dan AIK.</p>
     </div>
   </footer>
 
-  <!-- =========================
-       MODAL DETAIL
-  ========================== -->
-  <div class="modal-overlay" id="detailModal" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Tutup detail"><i class="fa-solid fa-xmark"></i></button>
-      <span class="section-label">Informasi</span>
-      <h2 id="modalTitle">Judul informasi</h2>
-      <p id="modalContent">Isi informasi.</p>
-      <button class="btn btn-primary" id="modalAction">Tutup <i class="fa-solid fa-check"></i></button>
-    </div>
-  </div>
-
-  <!-- Main JavaScript -->
-  <script src="js/script.js"></script>
+</div>
+  <script src="script.js"></script>
 </body>
 </html>
