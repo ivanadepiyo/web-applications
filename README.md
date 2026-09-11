@@ -1,87 +1,120 @@
-# SiberMu Connect
+# SIBERMU — Struktur & Panduan Edit
 
-Landing page untuk lomba pembuatan landing page SiberMu dengan tema:
-
-- Kemahasiswaan
-- Al-Islam dan Kemuhammadiyahan (AIK)
-
-## Struktur Folder
+## Isi folder
 
 ```text
-sibermu-connect/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── README.md
+sibermu/
+├── index.html   # Isi dan struktur halaman
+├── style.css    # Warna, layout, ukuran, responsive
+├── script.js    # Interaksi dan animasi
+└── README.md    # Panduan ini
 ```
 
-## Cara Menjalankan
+## Urutan kerja yang disarankan
 
-1. Buka folder proyek.
-2. Klik dua kali file `index.html`.
-3. Website akan terbuka di browser.
+### 1. Mengubah tulisan
+Buka `index.html`.
 
-Untuk hasil pengembangan yang lebih nyaman, gunakan Visual Studio Code dan ekstensi Live Server.
+Cari pembatas:
 
-## Bagian yang Mudah Diubah
+- `01. NAVBAR`
+- `02. HERO`
+- `03. INTRO`
+- `04. KEMAHASISWAAN`
+- `05. AKTIVITAS MAHASISWA`
+- `06. AIK`
+- `07. HIGHLIGHT`
+- `08. INFORMASI UTAMA`
+- `09. TENTANG & KREDIT`
+- `10. FOOTER`
 
-### Mengubah nama website
-Buka `index.html`, lalu cari teks:
+### 2. Mengubah warna
+Buka `style.css`.
+
+Warna utama yang paling sering digunakan:
+
+- `#1766d9` = biru utama
+- `#0e4b91` = biru gelap section
+- `#0e2d58` = footer
+- `#f5f9ff` = latar biru muda
+- `#ffffff` = putih
+
+Jika ingin mengganti identitas warna seluruh website, mulai dari warna-warna tersebut.
+
+### 3. Menambah card
+
+Cari contoh:
 
 ```html
-SiberMu
-CONNECT
+<article class="info-card">
 ```
 
-### Mengubah warna utama
-Buka `css/style.css`, lalu ubah variabel di bagian paling atas:
+Copy satu `<article>` lengkap sampai `</article>`, kemudian ubah:
 
-```css
-:root {
-  --primary: #1764d8;
-  --primary-dark: #0d3d8f;
-}
-```
+- nomor
+- ikon
+- judul
+- deskripsi
+- teks link
 
-### Mengubah isi kartu
-Buka `index.html`, cari bagian:
+Jangan mengubah `class="info-card"` jika ingin tampilannya tetap sama.
+
+### 4. Menambah section baru
+
+Letakkan section baru **sebelum**:
 
 ```html
-<section class="feature-section section-padding" id="kemahasiswaan">
+</main>
 ```
 
-atau:
+Gunakan pola:
 
 ```html
-<section class="aik-section section-padding" id="aik">
+<!-- =====================================================
+     11. SECTION BARU
+     ===================================================== -->
+<section class="section">
+  ...
+</section>
 ```
 
-### Mengubah kegiatan
-Cari bagian:
+Jika membutuhkan desain khusus, tambahkan class baru di `style.css`.
 
-```html
-<div class="activities-grid" id="activitiesGrid">
+### 5. Menambah fitur JavaScript
+
+Tambahkan di `script.js` sebagai blok baru:
+
+```javascript
+/* =========================================================
+   11. NAMA FITUR BARU
+   ========================================================= */
 ```
 
-Setiap kartu kegiatan memiliki atribut:
+Dengan cara ini fitur baru tidak tercampur dengan fitur lama.
 
-```html
-data-category="aik"
-```
+## Hal yang jangan dilakukan
 
-Pilihan kategori:
+- Jangan memasukkan CSS panjang ke dalam `index.html`.
+- Jangan memasukkan JavaScript panjang ke dalam `index.html`.
+- Jangan menghapus class HTML tanpa mengecek CSS.
+- Jangan mengubah nama file `style.css` atau `script.js` tanpa mengubah pemanggilannya.
+- Jangan memasukkan data resmi organisasi/AIK sebelum sumbernya jelas.
 
-- `aik`
-- `kemahasiswaan`
+## Pengembangan berikutnya
 
-### Menambah fitur JavaScript
-Tambahkan kode pada `js/script.js`. File tersebut sudah dibagi berdasarkan fungsi agar mudah dikembangkan.
+Struktur ini sengaja dibuat agar nantinya mudah ditambah:
 
-## Catatan
+- menu mobile / hamburger
+- modal detail kegiatan
+- slider kegiatan
+- galeri foto
+- daftar organisasi
+- daftar UKM
+- prestasi mahasiswa
+- agenda AIK
+- pencarian informasi
+- filter kegiatan
+- dark mode
+- integrasi Firebase/API jika memang diperlukan
 
-- Konten kegiatan pada template ini adalah contoh dan harus diganti dengan informasi resmi.
-- Tautan media sosial pada footer masih menggunakan tanda `#`; ganti dengan tautan resmi.
-- Jika menggunakan gambar atau ikon tambahan, cantumkan sumbernya pada bagian kredit halaman.
-- Template ini tidak memakai database atau backend. Jika nantinya diperlukan login, formulir, admin, atau data dinamis, backend/Firebase dapat ditambahkan pada tahap berikutnya.
+**Prinsip utama:** HTML untuk konten, CSS untuk tampilan, JavaScript untuk perilaku.
